@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer Portfolio - Farel Alfareza</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://pomf2.lain.la/f/dt11hn0u.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Bagian STYLE: Ubah warna input & textarea jadi hitam -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #111;
+            color: #fff;
+        }
+
+        #form {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            background-color: #1f1f1f;
+        }
+
+        .field {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid #444;
+            border-radius: 4px;
+            font-size: 16px;
+            color: black;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            border-color: #f97316;
+            outline: none;
+        }
+
+        #button {
+            background-color: dodgerblue;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #button:hover {
+            background-color: cyan;
+        }
+
+        .mt-12 img:nth-child(2) {
+            border-radius: 2px;
+        }
+
+        i {
+            font-size: 25px;
+        }
+
+        .bg-black {
+            padding: 10px;
+        }
+
+        section {
+            animation: listanimation linear forwards;
+            animation-timeline: view();
+        }
+
+@keyframes listanimation {
+            0% {
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+            }
+            80% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+
+</head>
+<body class="text-white bg-black">
+
+    <!-- Hero Section -->
+    <section class="bg-gray-900 py-20 text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
+                Hi, I'm <span class="text-blue-500">Farel Alfareza</span><br class="hidden md:block" />
+                Developer from Zeydra Ai
+            </h1>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                I design and develop user-friendly interfaces for web and mobile applications.
+            </p>
+            <div class="mt-6 flex justify-center flex-wrap gap-4">
+                <button onclick="donate()" class="bg-blue-500 text-white py-3 px-6 rounded-full hover:bg-blue-600 transition">Donate</button>
+                <button onclick="history.back()" class="bg-gray-700 text-white py-3 px-6 rounded-full hover:bg-gray-600 transition">Dashboard</button>
+            </div>
+
+            <!-- Social-style Card -->
+            <div class="mt-12 max-w-sm mx-auto bg-black rounded-lg overflow-hidden shadow-lg">
+                <div class="flex items-center p-4">
+                    <img src="image/fareldeveloper.png" alt="Profile picture" class="w-10 h-10 rounded-full" />
+                    <span class="ml-4 font-semibold">Farel.project_5</span>
+                    <i class="fas fa-ellipsis-h ml-auto"></i>
+                </div>
+                <img src="image/fareldeveloper.png" alt="Post Image" class="w-full object-cover" />
+                <div class="p-4 text-left">
+                    <div class="flex items-center mb-2 space-x-3">
+                        <i class="fas fa-heart text-red-600"></i>
+                        <i class="fas fa-comment text-white"></i>
+                        <i class="fas fa-paper-plane text-white"></i>
+                        <div class="ml-auto flex space-x-2">
+                            <i class="fas fa-ellipsis-h text-white"></i>
+                            <i class="far fa-bookmark text-white"></i>
+                        </div>
+                    </div>
+                    <p class="font-semibold mb-1">
+                        5,800 Likes
+                    </p>
+                    <p>
+                        <span class="font-semibold">Farel.project_5</span>: Udah Kece Gak Bang 😭
+                        <span class="text-blue-400">#Fyp #Fory...</span>
+                    </p>
+                    <p class="text-blue-400 mt-2 font-semibold">
+                        View All 598 Comments
+                    </p>
+                    <p class="text-gray-500 text-sm mt-1">
+                        5 DAYS AGO
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="bg-black py-20 text-center">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4">About <span class="text-blue-500">Me</span></h2>
+            <p class="text-gray-400 text-lg">
+                I am Farel Alfareza, a programmer and developer from Zeydra Ai. Zeydra Ai is an innovative platform
+                combining artificial intelligence with creativity to simplify daily work. With high dedication,
+                I keep learning and developing AI-based technology.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="bg-gray-900 py-20">
+        <div class="max-w-xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Contact <span class="text-blue-500">Me</span></h2>
+            <form id="form" class="space-y-6">
+                <div>
+                    <label for="name" class="block font-semibold mb-1">Name</label>
+                    <input type="text" name="name" id="name" required class="w-full px-4 py-2 rounded border focus:outline-none focus:ring focus:ring-blue-500">
+                </div>
+                <div>
+                    <label for="message" class="block font-semibold mb-1">Message</label>
+                    <input type="text" name="message" id="message" required class="w-full px-4 py-2 rounded border focus:outline-none focus:ring focus:ring-blue-500">
+                </div>
+                <div>
+                    <label for="title" class="block font-semibold mb-1">Message title</label>
+                    <input type="text" name="title" id="title" required class="w-full px-4 py-2 rounded border focus:outline-none focus:ring focus:ring-blue-500">
+                </div>
+                <div>
+                    <label for="email" class="block font-semibold mb-1">Email</label>
+                    <input type="email" name="email" id="email" required class="w-full px-4 py-2 rounded border focus:outline-none focus:ring focus:ring-blue-500">
+                </div>
+                <div class="text-center">
+                    <input type="submit" id="button" value="Send Message" class="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600 transition">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="mb-4 flex justify-center space-x-6 text-xl">
+                <a href="https://tiktok.com/@farel.project_5" class="text-gray-400 hover:text-blue-500"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="text-gray-400 hover:text-blue-500"><i class="fab fa-telegram"></i></a>
+                <a href="https://instagram.com/farel.project_5" class="text-gray-400 hover:text-blue-500"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/message/4WHG7ZD2XPPZM1" class="text-gray-400 hover:text-blue-500"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p class="text-gray-500 text-sm">
+                © <span id="years"></span> Zeydra Ai. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init('-74AhVg_5O6x8R4CW');
+
+        const btn = document.getElementById('button');
+        document.getElementById('form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            btn.value = 'Sending...';
+
+            const serviceID = 'default_service';
+            const templateID = 'template_xqx0ap4';
+
+            emailjs.sendForm(serviceID, templateID, this).then(() => {
+                btn.value = 'Send Message';
+                alert('Message sent successfully!');
+                location.reload();
+            }, (err) => {
+                btn.value = 'Send Message';
+                alert(JSON.stringify(err));
+            });
+        });
+
+        function donate() {
+            window.location.href = 'https://saweria.co/FarelAlfareza';
+        }
+
+        document.getElementById('years').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
